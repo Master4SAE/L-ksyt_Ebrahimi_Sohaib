@@ -1,12 +1,14 @@
+testi = input( )
+print(testi.lower())
+
+hytti_luokka = (input("Hei mitä hyttiluokan haluat ! "
+                     "Tarjolla on LUX, A, B, C ").upper())
 lux = 'LUX'
-lux1 = 'lux'
 a = 'A'
 b = 'B'
 c = 'C'
 
-hytti_luokka = (input("Hei mitä hyttiluokan haluat ! "
-                     "Tarjolla on LUX, A, B, C "))
-if hytti_luokka != lux || lux1:
+if hytti_luokka == lux:
     print(" LUX on parvekkeellinen hytti yläkannella. ")
 elif hytti_luokka == a:
     print(" A on ikkunallinen hytti autokannen yläpuolella. ")

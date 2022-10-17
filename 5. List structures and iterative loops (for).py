@@ -1,14 +1,16 @@
 #5.1
 import random
+print("Write a program that asks the user how many dice to roll. "
+      "The program rolls all the dice once and prints out the sum of the numbers. Use a for loop.")
 
-count_of_dice = []
-go_to_loop = 0
-ask_user_for_input = int(input("How many times should we roll the dice ?\n> "))
+users_input = int(input("how many times to roll the dice\n> "))
 
-while go_to_loop != ask_user_for_input:
-    rolling_the_dice = random.randint(1, 6)
-    print(rolling_the_dice)
-    count_of_dice.append(rolling_the_dice)
-    go_to_loop = go_to_loop + 1
-    
-print(f"this is the sum of all rolled dices {sum(count_of_dice)}")
+my_rolled_dices = []
+
+rolling_dice = range(users_input)
+
+for every_time in rolling_dice:
+      dice = random.randint(1,6)
+      print(dice)
+      my_rolled_dices.append(dice)
+print(f"the sum of all dices are {sum(my_rolled_dices)}")

@@ -31,3 +31,24 @@ while user_input != "":
 number_list.sort(reverse=True)
 
 print(number_list[0:5])
+
+#5.3
+print("Write a program that asks the user for an integer and tells if the number is a prime number."
+      " Prime numbers are number that are only divisible by one or the number itself."
+      "For example, 13 is a prime number as it can only be divided by 1 or 13 so that the result is an integer."
+      "On the other hand, 21 is not a prime number as it is divisible by 3 and 7.")
+
+user_input = int(input("Hey user give me a integer\n> "))
+
+if user_input > 1:
+    print("we in prime check")
+
+    for num in range(2, user_input):
+        if (user_input % num) == 0:
+            print(user_input, "is not a prime number")
+            print(num, "times", user_input // num, "is", user_input)
+            break
+    else:
+        print(user_input, "is a prime number")
+else:
+    print("The number you gave was not prime")

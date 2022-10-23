@@ -1,7 +1,7 @@
 #5.1
 import random
-print("Write a program that asks the user how many dice to roll. "
-      "The program rolls all the dice once and prints out the sum of the numbers. Use a for loop.")
+#print("Write a program that asks the user how many dice to roll. "
+#      "The program rolls all the dice once and prints out the sum of the numbers. Use a for loop.")
 
 users_input = int(input("how many times to roll the dice\n> "))
 
@@ -16,9 +16,9 @@ for every_time in rolling_dice:
 print(f"the sum of all dices are {sum(my_rolled_dices)}")
 
 #5.2
-print("2.Write a program that asks the user to enter numbers until they input an empty string to quit."
-      " At the end, the program prints out the five greatest numbers sorted in descending order."
-      " Hint: You can reverse the order of sorted list items by using the sort method with the reverse=True argument.")
+#print("2.Write a program that asks the user to enter numbers until they input an empty string to quit."
+#      " At the end, the program prints out the five greatest numbers sorted in descending order."
+#      " Hint: You can reverse the order of sorted list items by using the sort method with the reverse=True argument.")
 
 number_list = []
 
@@ -33,10 +33,10 @@ number_list.sort(reverse=True)
 print(number_list[0:5])
 
 #5.3
-print("Write a program that asks the user for an integer and tells if the number is a prime number."
-      " Prime numbers are number that are only divisible by one or the number itself."
-      "For example, 13 is a prime number as it can only be divided by 1 or 13 so that the result is an integer."
-      "On the other hand, 21 is not a prime number as it is divisible by 3 and 7.")
+#print("Write a program that asks the user for an integer and tells if the number is a prime number."
+#      " Prime numbers are number that are only divisible by one or the number itself."
+#      "For example, 13 is a prime number as it can only be divided by 1 or 13 so that the result is an integer."
+#      "On the other hand, 21 is not a prime number as it is divisible by 3 and 7.")
 
 user_input = int(input("Hey user give me a integer\n> "))
 

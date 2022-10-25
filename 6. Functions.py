@@ -59,3 +59,16 @@ my_list = [1, 2, 3, 4, 5, 6, 7, 8]
 print(get_sum(my_list))
 
 #6.5
+
+def befawa(my_list):
+    even_nums = []
+    for num in my_list:
+        if num % 2 == 0:
+            even_nums.append(num)
+    return even_nums
+
+
+my_list = [1, 2, 3, 4, 5, 6, 33, 32, 100]
+
+print(my_list)
+print(befawa(my_list))

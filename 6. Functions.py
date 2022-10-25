@@ -72,3 +72,38 @@ my_list = [1, 2, 3, 4, 5, 6, 33, 32, 100]
 
 print(my_list)
 print(befawa(my_list))
+
+#6.6
+import math
+
+def calculate_pizza(diameter, price):
+    square_meters = math.pi * ((diameter / 2) ** 2)
+    calculated = square_meters / price
+    return calculated
+
+
+def first_pizza():
+    print("hey give me the diameter and price of first pizza ")
+    diameter = float(input("Hey please give me the diameter of round pizza in centimeters\n> "))
+    price = float(input("Hey please give me the price of round pizza in Euros\n> "))
+    first_pizza = calculate_pizza(diameter, price)
+
+    print(f"The diameter of first pizza is {diameter} cm and its price is {price}€ and you pay about "
+          f"{first_pizza:0.3}€ per square meters")
+    return first_pizza
+
+
+def second_pizza():
+    print("hey give me the diameter and price of second pizza ")
+    diameter = float(input("Hey please give me the diameter of round pizza in centimeters\n> "))
+    price = float(input("Hey please give me the price of round pizza in Euros\n> "))
+    second_pizza = calculate_pizza(diameter, price)
+
+    print(f"The diameter of second pizza is {diameter} cm and its price is {price}€ and you pay about "
+          f"{second_pizza:0.3}€ per square meters")
+    return second_pizza
+
+if first_pizza() > second_pizza():
+    print("Second pizza has lower unit price")
+elif second_pizza() > first_pizza():
+    print("First pizza has lower unit price")

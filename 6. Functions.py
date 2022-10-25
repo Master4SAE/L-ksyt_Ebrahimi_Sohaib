@@ -94,7 +94,7 @@ def first_pizza():
 
 
 def second_pizza():
-    print("hey give me the diameter and price of second pizza ")
+    print("Hey give me the diameter and price of second pizza ")
     diameter = float(input("Hey please give me the diameter of round pizza in centimeters\n> "))
     price = float(input("Hey please give me the price of round pizza in Euros\n> "))
     second_pizza = calculate_pizza(diameter, price)

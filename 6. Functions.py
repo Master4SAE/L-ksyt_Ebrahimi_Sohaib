@@ -34,3 +34,16 @@ while True:
     if dice_rolled == sides:
         break
 
+#6.3
+
+def get_converter(user_input):
+    # 1 liter =0.264172052 US gallons
+    convert = user_input * 3.785
+    return convert
+
+
+while True:
+    user_input = float(input("Give me the volume in gallons!\n if negative value given program will end\n> "))
+    if user_input < 0:
+        break
+    print(f"{user_input} Gallons is {get_converter(user_input)} liters")

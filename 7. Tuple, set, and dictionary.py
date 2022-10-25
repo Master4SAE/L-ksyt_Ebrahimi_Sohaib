@@ -13,7 +13,28 @@ elif user_input == 9 or user_input == 10 or user_input == 11:
 else:
       print("Error 404")
 
-#      
+#7.2
+
+my_set = set()
+mu_list = []
+
+user_input = input("please give me names \n For exiting press enter \n> ")
+
+while user_input != "":
+
+    if user_input in my_set:
+        print("existing name")
+    else:
+        print("new name")
+
+    my_set.add(user_input)
+    mu_list.append(user_input)
+
+    user_input = input("please give me names \n For exiting press enter \n> ")
+for name in mu_list:
+      print(name)
+
+#7.3        
 # stored data
 ico_code_airport_name = {"EFHK": "Helisnki-Vantaa Airport"}
 # asks what to do

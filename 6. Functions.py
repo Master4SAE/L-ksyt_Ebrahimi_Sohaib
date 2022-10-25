@@ -47,3 +47,15 @@ while True:
     if user_input < 0:
         break
     print(f"{user_input} Gallons is {get_converter(user_input)} liters")
+    
+#6.4
+
+def get_sum(my_list):
+    return sum(my_list)
+
+
+my_list = [1, 2, 3, 4, 5, 6, 7, 8]
+
+print(get_sum(my_list))
+
+#6.5

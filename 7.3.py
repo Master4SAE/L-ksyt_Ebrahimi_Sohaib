@@ -1,4 +1,19 @@
+# 7.1
 
+seasons = ("spring", "summer", "autumn", "winter")
+user_input = int(input("Hey user give me a number of a month\n> "))
+if user_input == 12 or user_input == 1 or user_input == 2:
+    print(f"the season is {seasons[3]}")
+elif user_input == 3 or user_input == 4 or user_input == 5:
+    print(f"the season is {seasons[2]}")
+elif user_input == 6 or user_input == 7 or user_input == 8:
+    print(f"the season is {seasons[1]}")
+elif user_input == 9 or user_input == 10 or user_input == 11:
+    print(f"the season is {seasons[0]}")
+else:
+      print("Error 404")
+
+#      
 # stored data
 ico_code_airport_name = {"EFHK": "Helisnki-Vantaa Airport"}
 # asks what to do

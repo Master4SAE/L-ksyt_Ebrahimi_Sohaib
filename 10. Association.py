@@ -1,27 +1,31 @@
 #10.1
-class Elevator:                                                                                    
-    def __init__(self, bottom_floors, top_floors, starting_position=0):                            
-        self.bottom_floors = bottom_floors                                                         
-        self.top_floors = top_floors                                                               
-        self.starting_position = starting_position                                                 
-                                                                                                   
-    def got_to_floor(self, times):                                                                 
-        if self.starting_position == 0:                                                            
-            Elevator.floor_up(self, times)                                                         
-        elif self.starting_position > times:                                                       
-            Elevator.floor_down(self, times)                                                       
-                                                                                                   
-    def floor_up(self, times):                                                                     
-        while times > self.starting_position:                                                      
-            self.starting_position = self.starting_position + 1                                    
-            print(f"you are currently in floor {self.starting_position}")                          
-                                                                                                   
-    def floor_down(self, times):                                                                   
-        while times < self.starting_position:                                                      
-            print(f"you are currently in floor {self.starting_position}")                          
-            self.starting_position = self.starting_position - 1                                    
-                                                                                                   
-                                                                                                                                                                  
-h = Elevator(0,10)                                                                                                                                                                     
-h.got_to_floor(10)                                                                                 
-h.got_to_floor(0)                                                                                  
+class Elevator:
+    def __init__(self, bottom_floors, top_floors, current_position=0):
+        self.bottom_floors = bottom_floors
+        self.top_floors = top_floors
+        self.current_position = current_position
+
+    def got_to_floor(self, times):
+        if self.bottom_floors < times < self.top_floors and times > self.current_position:
+            Elevator.floor_up(self, times)
+        elif self.top_floors >= times > self.bottom_floors and times < self.current_position:
+            Elevator.floor_down(self, times)
+
+    def floor_up(self, times):
+        self.current_position = self.current_position + times
+        for floor in range(times):
+            print(f"you are currently in floor {floor+1}")
+        return self.current_position
+
+    def floor_down(self, times):
+
+        for floor in range(times):
+            print(f"you are currently in floor {self.current_position-1}")
+            self.current_position = self.current_position-1
+        return self.current_position
+
+
+h = Elevator(0, 10)
+
+h.got_to_floor(5)
+h.got_to_floor(3)                                                                    

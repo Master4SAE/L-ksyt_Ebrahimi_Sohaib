@@ -76,3 +76,68 @@ building = Building(0,10,2)
 building.run_elevator(0,5)
 building.run_elevator(1,4)
 building.run_elevator(0,2)
+
+#10.3
+class Elevator:
+    def __init__(self, bottom_floor, top_floor):
+        self.bottom_floor = bottom_floor
+        self.top_floor = top_floor
+        self.current_floor = bottom_floor
+
+    def go_to_floor(self, floor):
+        if floor < self.bottom_floor or floor > self.top_floor:
+            print("Floor not within elevator's range.")
+            return
+
+        if floor == self.current_floor:
+            print("Elevator is already on this floor.")
+            return
+
+        if floor > self.current_floor:
+            self.floor_up(floor)
+        else:
+            self.floor_down(floor)
+
+    def floor_up(self, floor):
+        for i in range(self.current_floor, floor):
+            self.current_floor = i
+            print(f"Elevator moving to floor {i}")
+
+        self.current_floor = floor
+        print(f"Elevator arrived at floor {floor}")
+
+    def floor_down(self, floor):
+        for i in range(self.current_floor, floor, -1):
+            self.current_floor = i
+            print(f"Elevator moving to floor {i}")
+
+        self.current_floor = floor
+        print(f"Elevator arrived at floor {floor}")
+
+
+class Building:
+    def __init__(self, bottom_floor, top_floor, num_elevators):
+        self.bottom_floor = bottom_floor
+        self.top_floor = top_floor
+        self.num_elevators = num_elevators
+        self.elevators = []
+
+        for i in range(num_elevators):
+            self.elevators.append(Elevator(bottom_floor, top_floor))
+
+    def run_elevator(self, elevator_num, destination_floor):
+        if elevator_num < 0 or elevator_num >= self.num_elevators:
+            print("Invalid elevator number.")
+            return
+
+        self.elevators[elevator_num].go_to_floor(destination_floor)
+
+    def fire_alarm(self):
+        for elevator in self.elevators:
+            elevator.go_to_floor(self.bottom_floor)
+
+
+building = Building(1, 10, 2)
+building.run_elevator(0, 5)
+building.run_elevator(1, 8)
+building.fire_alarm()
